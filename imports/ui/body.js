@@ -8,6 +8,7 @@ import './body.html';
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
+  console.log(Geolocation.currentLocation());
 });
 
 
@@ -32,19 +33,32 @@ Template.body.events({
   'submit .new-task'(event) {
     // Prevent default browser form submit
     event.preventDefault();
+
+    var geodata = Geolocation.currentLocation();
+    console.log(geodata);
+    console.log(geodata.coords);
  
     // Get value from form element
     const target = event.target;
     const text = target.text.value;
+    const breitengrad = geodata.coords.latitude;
+    const laengengrad = geodata.coords.longitude;
+    const hoehe = geodata.coords.altitude;
+    
  
     // Insert a task into the collection
     Tasks.insert({
       text,
+      breitengrad,
+      laengengrad,
+      hoehe,
       createdAt: new Date(), // current time
     });
  
     // Clear form
     target.text.value = '';
+    target.breitengrad.value = '';
+    target.laengengrad.value = '';
   },
     'change .hide-completed input'(event, instance) {
     instance.state.set('hideCompleted', event.target.checked);
