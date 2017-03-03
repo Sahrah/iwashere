@@ -51,10 +51,10 @@ form {
 .new-post input {
   box-sizing: border-box;
   padding: 10px 0;
-  background: transparent;
+  margin: 10px 0;
+  background: #fff;
   border: none;
-  width: 100%;
-  padding-right: 80px;
+  width: 25%;
   font-size: 1em;
 }
  
@@ -67,7 +67,8 @@ form {
   border: none;
   font-size: 1em;
   font-family: Arial;
-  width: 100%;
+  width: 80%;
+  padding: 10px;
 }
  
 ul {
@@ -115,6 +116,11 @@ header .hide-completed {
  
 .toggle-private {
   margin-left: 5px;
+}
+
+.invisible{
+  display: none;
+  visibility: hidden;
 }
  
 @media (max-width: 600px) {

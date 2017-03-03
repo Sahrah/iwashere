@@ -1,12 +1,15 @@
 <template name="post">
   <li class="{{#if checked}}checked{{/if}}">
-    <button class="delete">&times;</button>
+    <button class="invisible delete">&times;</button>
  
-    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked invisible" />
  
-    <span class="text">{{text}}</span>
-    <span class="text">{{breitengrad}}</span>
-    <span class="text">{{laengengrad}}</span>
-    <span class="text">{{hoehe}}</span>
+    <p class="text">{{text}}</p>
+    <p>
+    	<span class="text">{{createdAt}}</span>
+    	<span class="text">{{breitengrad}}</span>
+    	<span class="text">{{laengengrad}}</span>
+    	<span class="text">{{hoehe}}</span>
+    </p>
   </li>
 </template>
