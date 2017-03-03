@@ -57,8 +57,6 @@ Template.body.events({
  
     // Clear form
     target.text.value = '';
-    target.breitengrad.value = '';
-    target.laengengrad.value = '';
   },
     'change .hide-completed input'(event, instance) {
     instance.state.set('hideCompleted', event.target.checked);
