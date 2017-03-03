@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Tasks } from '../api/tasks.js';
+import { Posts } from '../api/tasks.js';
 
 import './task.js';
  
@@ -13,18 +13,18 @@ Template.body.onCreated(function bodyOnCreated() {
 
 
 Template.body.helpers({
-  tasks() {
+  posts() {
     const instance = Template.instance();
     if (instance.state.get('hideCompleted')) {
-      // If hide completed is checked, filter tasks
-      return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
+      // If hide completed is checked, filter posts
+      return Posts.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
     }
-    // Otherwise, return all of the tasks
-    return Tasks.find({}, { sort: { createdAt: -1 } });
+    // Otherwise, return all of the posts
+    return Posts.find({}, { sort: { createdAt: -1 } });
   },
-        // Incomplete Tasks Counter
+        // Incomplete Posts Counter
     incompleteCount() {
-    return Tasks.find({ checked: { $ne: true } }).count();
+    return Posts.find({ checked: { $ne: true } }).count();
   },
 });
 
@@ -47,7 +47,7 @@ Template.body.events({
     
  
     // Insert a post into the collection
-    Tasks.insert({
+    Posts.insert({
       text,
       breitengrad,
       laengengrad,
