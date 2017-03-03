@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Posts } from '../api/tasks.js';
+import { Posts } from '../api/posts.js';
 
-import './task.js';
+import './post.js';
  
 import './body.html';
 

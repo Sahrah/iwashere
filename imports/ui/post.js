@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
  
-import { Posts } from '../api/tasks.js';
+import { Posts } from '../api/posts.js';
  
-import './task.html';
+import './post.html';
  
 Template.post.events({
   'click .toggle-checked'() {
