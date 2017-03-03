@@ -1,15 +1,16 @@
 <body>
   <div class="container">
     <header>
-      <h1>I WAS HERE! ({{incompleteCount}})</h1>
+      <h1>I WAS HERE ({{incompleteCount}})</h1>
 
        <label class="hide-completed">
         <input type="checkbox" />
         Hide Completed Tasks
       </label>
 
-      <form class="new-task">
-        <input type="text" name="text" placeholder="Type to add new tasks" />
+      <form class="new-post">
+        <textarea maxlength="140" name="text" placeholder="Type to add a new post"></textarea>
+        <!--input type="text" name="text" placeholder="Type to add new post" /-->
         <input type="submit">
       </form>
     </header>

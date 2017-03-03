@@ -30,7 +30,7 @@ Template.body.helpers({
 
 // Form Event - Input
 Template.body.events({
-  'submit .new-task'(event) {
+  'submit .new-post'(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
@@ -46,7 +46,7 @@ Template.body.events({
     const hoehe = geodata.coords.altitude;
     
  
-    // Insert a task into the collection
+    // Insert a post into the collection
     Tasks.insert({
       text,
       breitengrad,

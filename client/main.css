@@ -48,7 +48,7 @@ form {
   position: relative;
 }
  
-.new-task input {
+.new-post input {
   box-sizing: border-box;
   padding: 10px 0;
   background: transparent;
@@ -58,8 +58,16 @@ form {
   font-size: 1em;
 }
  
-.new-task input:focus{
+.new-post input:focus{
   outline: 0;
+}
+
+.new-post textarea{
+  outline: 0;
+  border: none;
+  font-size: 1em;
+  font-family: Arial;
+  width: 100%;
 }
  
 ul {
@@ -119,7 +127,7 @@ header .hide-completed {
     clear: both;
   }
  
-  .new-task input {
+  .new-post input {
     padding-bottom: 5px;
   }
 }/* CSS declarations go here */
