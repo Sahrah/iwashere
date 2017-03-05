@@ -1,0 +1,189 @@
+@import 'variables';
+
+body {
+  font-family: $font-stack;
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-attachment: fixed;
+ 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  padding: 0;
+  margin: 0;
+ 
+  font-size: 14px;
+}
+ 
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+
+.invisible{
+  display: none;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#login-buttons {
+  display: block;
+} 
+
+ 
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
+ 
+ 
+.toggle-private {
+  margin-left: 5px;
+}
+
+header, #main form.new-post{
+  padding: 20px 15px 15px 15px;
+}
+
+
+
+/**** HEADER */ 
+header {
+  background: #000;
+  /*background: #d2edf4;
+  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);*/
+  position: relative;
+
+  .hide-completed {
+    float: right;
+  }
+
+  .headline{
+
+    figure{
+      display: inline;
+      margin: 0 5px 0 0;
+   
+      img{
+        width: 30px;
+        height: auto;
+      }
+    }
+
+    h1{
+      position: absolute;
+      margin: 8px 5px;
+      color: #fff;
+    }
+  }
+} /* END OF HEADER */
+
+
+
+/**** MAIN */
+#main{
+
+  /* INPUT FORMULAR */
+  form.new-post{
+    background-color: $app-color;
+
+    input{
+      box-sizing: border-box;
+      padding: 10px 0;
+      margin: 10px 0;
+      background: #fff;
+      border:none;
+      width: 25%;
+      font-size: 1em;
+    }
+   
+    input:focus{
+      outline: 0;
+    }
+
+    textarea{
+      outline: 0;
+      border:  none;
+      font-size: 1em;
+      font-family: Arial;
+      width: 80%;
+      padding: 10px;
+    }
+  }
+
+  /* POST LIST */
+  .post-list{
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      background: white;
+      
+      li {
+        position: relative;
+        list-style: none;
+        padding: 15px;
+        border-bottom: #eee solid 1px;
+
+        p {
+          margin-left: 10px;
+          
+          &.post-text{
+            font-weight: bold;
+          }
+        }
+      
+        &.checked {
+          color: #888;
+        }
+
+        &.checked .text {
+          text-decoration: line-through;
+        }
+       
+        &.private {
+          background: #eee;
+          border-color: #ddd;
+        }
+
+      } /* li */
+  
+    } /* ul */
+  
+  } /* post-list */
+
+} /* END OF MAIN */
+
+
+
+ 
+@media (max-width: 600px) {
+  li {
+    padding: 12px 15px;
+  }
+ 
+  .search {
+    width: 150px;
+    clear: both;
+  }
+ 
+  .new-post input {
+    padding-bottom: 5px;
+  }
+}/* CSS declarations go here */

@@ -1,0 +1,24 @@
+<svg width="47" height="48" viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(2296 -682)" figma:type="canvas">
+<g id="Group" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Rectangle 14" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="matrix(0.707107 0.707107 -0.707107 0.707107 -2272.5 682.5)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="matrix(0.707107 0.707107 -0.707107 0.707107 -2272.5 682.5)" fill="#EB5757" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="Polygon" style="mix-blend-mode:normal;" figma:type="regular-polygon">
+<use xlink:href="#path2_fill" transform="translate(-2285 694)" fill="#EB5757" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 33 0L 33 33L 0 33L 0 0Z"/>
+<path id="path1_stroke_2x" d="M 0 0L 0 -2L -2 -2L -2 0L 0 0ZM 33 0L 35 0L 35 -2L 33 -2L 33 0ZM 33 33L 33 35L 35 35L 35 33L 33 33ZM 0 33L -2 33L -2 35L 0 35L 0 33ZM 0 2L 33 2L 33 -2L 0 -2L 0 2ZM 31 0L 31 33L 35 33L 35 0L 31 0ZM 33 31L 0 31L 0 35L 33 35L 33 31ZM 2 33L 2 0L -2 0L -2 33L 2 33Z"/>
+<path id="path2_fill" d="M 12.5 0L 23.3253 18.75L 1.67468 18.75L 12.5 0Z"/>
+</defs>
+</svg>
