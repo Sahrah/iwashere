@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Tasks } from '../api/tasks.js';
+import { Posts } from '../api/posts.js';
 
-import './task.js';
+import './post.js';
  
 import './body.html';
 
@@ -13,24 +13,24 @@ Template.body.onCreated(function bodyOnCreated() {
 
 
 Template.body.helpers({
-  tasks() {
+  posts() {
     const instance = Template.instance();
     if (instance.state.get('hideCompleted')) {
-      // If hide completed is checked, filter tasks
-      return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
+      // If hide completed is checked, filter posts
+      return Posts.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
     }
-    // Otherwise, return all of the tasks
-    return Tasks.find({}, { sort: { createdAt: -1 } });
+    // Otherwise, return all of the posts
+    return Posts.find({}, { sort: { createdAt: -1 } });
   },
-        // Incomplete Tasks Counter
+        // Incomplete Posts Counter
     incompleteCount() {
-    return Tasks.find({ checked: { $ne: true } }).count();
+    return Posts.find({ checked: { $ne: true } }).count();
   },
 });
 
 // Form Event - Input
 Template.body.events({
-  'submit .new-task'(event) {
+  'submit .new-post'(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
@@ -46,8 +46,8 @@ Template.body.events({
     const hoehe = geodata.coords.altitude;
     
  
-    // Insert a task into the collection
-    Tasks.insert({
+    // Insert a post into the collection
+    Posts.insert({
       text,
       breitengrad,
       laengengrad,
@@ -57,8 +57,6 @@ Template.body.events({
  
     // Clear form
     target.text.value = '';
-    target.breitengrad.value = '';
-    target.laengengrad.value = '';
   },
     'change .hide-completed input'(event, instance) {
     instance.state.set('hideCompleted', event.target.checked);
