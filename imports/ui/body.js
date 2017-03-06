@@ -35,8 +35,8 @@ Template.body.events({
     event.preventDefault();
 
     var geodata = Geolocation.currentLocation();
-    console.log(geodata);
-    console.log(geodata.coords);
+    //console.log(geodata);
+    //console.log(geodata.coords);
  
     // Get value from form element
     const target = event.target;
@@ -44,7 +44,6 @@ Template.body.events({
     const breitengrad = geodata.coords.latitude;
     const laengengrad = geodata.coords.longitude;
     const hoehe = geodata.coords.altitude;
-    
  
     // Insert a post into the collection
     Posts.insert({
@@ -53,7 +52,14 @@ Template.body.events({
       laengengrad,
       hoehe,
       createdAt: new Date(), // current time
-    });
+      }, 
+      
+      function( error, result) { 
+        if ( error ) console.log ( error ); // error
+        if ( result ) console.log ( result ); // id
+      }
+    );
+
  
     // Clear form
     target.text.value = '';
